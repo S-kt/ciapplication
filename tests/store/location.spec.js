@@ -49,9 +49,7 @@ describe('(Internal Module) Location', () => {
 
     
 
-    it('Should return an action with type "COUNTER_INCREMENT".', () => {
-      expect(increment()).to.have.property('type', COUNTER_INCREMENT)
-    })
+    
 
     it('Should assign the first argument to the "payload" property.', () => {
       const locationState = { pathname: '/yup' }
