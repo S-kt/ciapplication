@@ -9,7 +9,9 @@ describe('(Redux Module) Counter', () => {
   it('Should export a constant COUNTER_INCREMENT.', () => {
     expect(COUNTER_INCREMENT).to.equal('COUNTER_INCREMENT')
   })
-
+  it('Should return an action with type "COUNTER_INCREMENT".', () => {
+    expect(increment()).to.have.property('type', COUNTER_INCREMENT)
+  })
   describe('(Reducer)', () => {
     it('Should be a function.', () => {
       expect(counterReducer).to.be.a('function')
@@ -36,9 +38,7 @@ describe('(Redux Module) Counter', () => {
       expect(increment).to.be.a('function')
     })
 
-    it('Should return an action with type "COUNTER_INCREMENT".', () => {
-      expect(increment()).to.have.property('type', COUNTER_INCREMENT)
-    })
+    
 
     it('Should assign the first argument to the "payload" property.', () => {
       expect(increment(5)).to.have.property('payload', 5)
