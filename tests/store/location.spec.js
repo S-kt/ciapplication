@@ -43,8 +43,8 @@ describe('(Internal Module) Location', () => {
       expect(locationChange).to.be.a('function')
     })
 
-    it('Should return an action with type "LOCATION_CHANGE".', () => {
-      expect(locationChange()).to.have.property('type', LOCATION_CHANGE)
+    it('Should return an action with type "COUNTER_INCREMENT".', () => {
+      expect(increment().to.have.property('type', COUNTER_INCREMENT))
     })
 
     it('Should assign the first argument to the "payload" property.', () => {
